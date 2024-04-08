@@ -34,9 +34,12 @@
         </div>
 
     </main>
-    <footer>
-        <p>&copy; 2024 Lucky-Lot Cars</p>
-    </footer>
+    <script>
+        (async function() {
+            const { text } = await( await fetch(`/api/message`)).json();
+            document.querySelector('#name').textContent = text;
+        }());
+        </script>
 
 </body>
 
